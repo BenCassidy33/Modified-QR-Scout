@@ -1,4 +1,5 @@
 import QRCode from 'qrcode.react';
+import { saveData } from '../store/store';
 
 export interface QRModalProps {
   show: boolean;
@@ -42,6 +43,13 @@ export default function QRModal(props: QRModalProps) {
                     <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
                   </svg>
                 </div>
+                <button
+                  className="focus:shadow-outline rounded bg-red-rhr py-2 px-4 font-bold text-white hover:bg-red-700 focus:outline-none"
+                  type="button"
+                  onClick={() => saveData()}
+                >
+                  Save Current Data
+                </button>
                 <button
                   className="focus:shadow-outline rounded bg-red-rhr py-2 px-4 font-bold text-white hover:bg-red-700 focus:outline-none"
                   type="button"

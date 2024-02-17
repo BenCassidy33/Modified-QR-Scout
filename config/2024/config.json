@@ -41,13 +41,6 @@
           "code": "teamNumber"
         },
         {
-          "title": "Human Player at Amp",
-          "type": "boolean",
-          "required": false,
-          "defaultValue": false,
-          "code": "humanPlayer"
-        },
-        {
           "title": "No Show",
           "type": "boolean",
           "defaultValue": false,

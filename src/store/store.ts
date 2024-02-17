@@ -3,6 +3,7 @@ import { ChangeEvent } from 'react';
 import configJson from '../../config/2024/config.json';
 import { Config } from '../inputs/BaseInputProps';
 import { createStore } from './createStore';
+import * as fs from 'fs';
 
 function buildConfig(c: Config) {
   let config: Config = { ...c };
@@ -98,8 +99,23 @@ export function getQRCodeData(): string {
       .getState()
       .formData.sections.map(s => s.fields)
       .flat()
-      .map(v => `   ${v.title}: ${v.value}`)
+      .map(v => {
+        if (parseInt(v.value)) {
+          return `   \'${v.title}\': ${v.value}`;
+        } else if (typeof v.value === 'string') {
+          return `   \'${v.title}\': '${v.value}'`;
+        }
+        return `   \'${v.title}\': ${v.value}`;
+      })
       .join(',\n') +
     '\n}'
   );
 }
+
+export function saveData(): void {
+  const data = getQRCodeData();
+
+  console.log(JSON.parse(data));
+}
+
+export function getRecentData() {}
