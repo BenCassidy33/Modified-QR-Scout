@@ -1,0 +1,4 @@
+Prematch: Scouter Initals (text), ?, Robot Number Color (R1, Dropdown Choice), Team Number (number), Human Player at Amp (bool), No Show (bool)
+Autonomous: Amp Scored (number), Amp Missed (number), Speaker Score (number), Loaded More Notes? (number), Auto Foul (bool)
+Telop: Coopertation (bool), Amp Scored (number), Amp Missed (number), Speaker Score (number), Loaded More Notes? (number), Note Pickup Location (dropdown: ["none", "ground", "Manually Set", "Both"], Default: "None")
+Endgame: End Position (dropdown: ["No Climb", "Parked", "Onstage", "Spotlight"], Default: "No Climb"), Note in Trap (boolean, 0 | True), Harmony (dropdown, ["Not Compleated", "First on Chain", "Second on Chain", "Third on Chain"]), High Note (dropdown, ["Not Compleated", "First on Chain", "Second on Chain", "Third on Chain"], default: None)
